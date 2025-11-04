@@ -1,23 +1,27 @@
 // src/components/Header.js
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './Header.css'; // We'll create this CSS file next
+// Import NavLink instead of Link to get the "active" class for styling
+import { NavLink, Link } from 'react-router-dom';
+import './Header.css'; // Your NEWLY updated CSS file
 
 const Header = () => {
   return (
     <header className="site-header">      
-      {/* Main Navigation */}
+      {/* --- 2. MAIN NAVIGATION --- */}
       <nav className="main-nav">
         <div className="container">
+          {/* Use Link for the logo as it's not a nav item */}
           <Link to="/" className="logo">
             Mirins <strong>Multispeciality Hospital</strong>
           </Link>
+          
+          {/* Use NavLink here for the active class styling */}
           <ul className="nav-links">
-            <li><Link to="/find-a-doctor">Find a Doctor</Link></li>
-            <li><Link to="/services">Services & Departments</Link></li>
-            <li><Link to="/patients-visitors">Patients & Visitors</Link></li>
-            <li><Link to="/about">About Mirins</Link></li>
-            <li><Link to="/contact">Contact & Locations</Link></li>
+            <li><NavLink to="/find-a-doctor">Our Doctors</NavLink></li>
+            <li><NavLink to="/services">Departments</NavLink></li>
+            <li><NavLink to="/patients-visitors">Visitors</NavLink></li>
+            <li><NavLink to="/about">About us</NavLink></li>
+            <li><NavLink to="/contact">Contact us</NavLink></li>
           </ul>
         </div>
       </nav>

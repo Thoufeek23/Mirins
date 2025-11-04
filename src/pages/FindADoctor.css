@@ -7,6 +7,7 @@
 }
 
 /* --- Search Bar --- */
+/* (Search bar styles remain the same) */
 .search-bar {
   background-color: var(--neutral-white);
   padding: 2rem;
@@ -18,12 +19,13 @@
   gap: 1.5rem;
   align-items: flex-end;
 }
-
 .search-bar .form-group {
   display: flex;
   flex-direction: column;
+  /* Keep the label at the top and align the control (input/select/button)
+     to the bottom so all controls sit on the same baseline */
+  justify-content: flex-end;
 }
-
 .search-bar label {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
@@ -31,7 +33,6 @@
   color: var(--primary-navy);
   margin-bottom: 0.5rem;
 }
-
 .search-bar input,
 .search-bar select {
   font-family: 'Poppins', sans-serif;
@@ -41,30 +42,83 @@
   border-radius: 8px;
   background-color: #f9f9f9;
 }
-
 .search-bar input:focus,
 .search-bar select:focus {
   outline: 2px solid var(--accent-teal);
   border-color: var(--accent-teal);
   background-color: var(--neutral-white);
 }
-
-.checkbox-group {
+.toggle-group {
   display: flex;
   align-items: center;
-  padding-bottom: 12px; /* Aligns with the inputs */
-  gap: 0.5rem;
+  /* remove extra bottom padding so the toggle lines up with inputs */
+  padding-bottom: 0;
 }
 
-.checkbox-group input {
-  width: 18px;
-  height: 18px;
+.toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  padding: 8px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 180ms ease, box-shadow 180ms ease, transform 120ms ease;
+  font-weight: 600;
+  color: var(--primary-navy);
 }
 
-.checkbox-group label {
-  margin-bottom: 0;
-  font-weight: 500;
-  font-size: 1rem;
+.toggle-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(11, 22, 39, 0.06);
+}
+
+.toggle-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.12);
+}
+
+.toggle-btn .toggle-knob {
+  width: 36px;
+  height: 20px;
+  background: #ffffff;
+  border-radius: 999px;
+  display: inline-block;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(2,6,23,0.08);
+}
+
+.toggle-btn .toggle-knob::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background: #cbd5e1;
+  border-radius: 50%;
+  transition: left 160ms ease, background 160ms ease;
+}
+
+.toggle-btn.active {
+  background: var(--accent-teal);
+  color: #fff;
+  border-color: transparent;
+}
+
+.toggle-btn.active .toggle-knob {
+  background: rgba(255,255,255,0.15);
+}
+
+.toggle-btn.active .toggle-knob::after {
+  left: 20px;
+  background: #fff;
+}
+
+.toggle-label {
+  font-size: 0.95rem;
 }
 
 
@@ -76,31 +130,35 @@
   margin-bottom: 1.5rem;
 }
 
+
+/* Keep cards a fixed width and centered. This prevents cards from stretching to full width
+   on narrow viewports and maintains a consistent card size across devices. */
 .doctor-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
+  justify-content: flex-start; /* left-align the fixed-width cards */
+  align-items: flex-start;
 }
 
-/* --- Doctor Card --- */
+/* --- Doctor Card (MODIFIED) --- */
 .doctor-card {
   background-color: var(--neutral-white);
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  transition: all 0.3s ease;
+  /* Fixed width to keep card size consistent across viewports */
+  width: 320px; /* fixed card width */
+  min-width: 320px;
+  max-width: 320px;
 }
 
-.doctor-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
+/* REMOVED the .doctor-card:hover styles, as .lift-on-hover handles this. */
 
 .doctor-card-image {
   width: 100%;
-  height: 280px;
+  height: 220px; /* slightly reduced to fit fixed card height */
   object-fit: cover;
   object-position: top; /* Ensures headshots are centered */
 }

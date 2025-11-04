@@ -116,14 +116,17 @@ const FindADoctor = () => {
             </select>
           </div>
           
-          <div className="form-group checkbox-group">
-            <input
-              type="checkbox"
-              id="doc-virtual"
-              checked={filterVirtual}
-              onChange={(e) => setFilterVirtual(e.target.checked)}
-            />
-            <label htmlFor="doc-virtual">Offers Virtual Visits</label>
+          <div className="form-group toggle-group">
+            {/* Accessible toggle button replacing the checkbox for a nicer UI */}
+            <button
+              type="button"
+              className={`toggle-btn ${filterVirtual ? 'active' : ''}`}
+              aria-pressed={filterVirtual}
+              onClick={() => setFilterVirtual(prev => !prev)}
+            >
+              <span className="toggle-knob" aria-hidden="true"></span>
+              <span className="toggle-label">Offers Virtual Visits</span>
+            </button>
           </div>
         </div>
         
