@@ -1,0 +1,25 @@
+.services-page {
+  padding: 40px 0;
+}
+
+.services-header h1 {
+  margin-bottom: 8px;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.service-item {
+  background: #fff;
+  border-radius: 6px;
+  padding: 18px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.service-item h3 {
+  margin-top: 0;
+}

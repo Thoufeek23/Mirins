@@ -1,0 +1,83 @@
+/* src/pages/Visitors.css */
+
+.visitors-page {
+  padding: 4rem 0;
+  background-color: var(--neutral-gray);
+}
+
+.visitors-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.visitors-header h1 {
+  font-size: 2.8rem;
+}
+
+.visitors-header p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  color: var(--text-light);
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+}
+
+.accordion-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: var(--neutral-white);
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+  overflow: hidden; /* For the border-radius */
+}
+
+/* Styles for content inside the accordion */
+.visitor-content-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.visitor-content-container h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  color: var(--primary-navy);
+  margin-bottom: 0.5rem;
+}
+
+.visitor-content-container ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.visitor-content-container li {
+  font-family: 'Merriweather', serif;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+/* Simple checkmark icon */
+.visitor-content-container li::before {
+  content: '✓';
+  color: var(--accent-teal);
+  font-weight: 600;
+  position: absolute;
+  left: 0;
+}
+
+.map-placeholder {
+  width: 100%;
+  height: 300px;
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #777;
+  grid-column: 1 / -1; /* Makes it span both columns */
+}

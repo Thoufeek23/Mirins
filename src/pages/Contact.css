@@ -1,0 +1,157 @@
+/* src/pages/Contact.css */
+
+.contact-page {
+  padding: 4rem 0;
+  background-color: var(--neutral-gray);
+}
+
+.contact-page h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 3rem;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 3rem;
+}
+
+/* --- Left Column (Map & Form) --- */
+.contact-left-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.map-container {
+  width: 100%;
+  height: 400px;
+  background-color: #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #777;
+}
+
+.contact-form {
+  background-color: var(--neutral-white);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+}
+
+.contact-form h2 {
+  text-align: left;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--primary-navy);
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* --- Right Column (Locations & Numbers) --- */
+.contact-right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.location-card,
+.key-numbers {
+  background-color: var(--neutral-white);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+}
+
+.location-card h3 {
+  font-size: 1.5rem;
+  color: var(--primary-navy);
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid var(--secondary-sky);
+  padding-bottom: 0.5rem;
+}
+
+.location-card p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+
+.location-card strong {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-dark);
+}
+
+.key-numbers h2 {
+  text-align: left;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.key-numbers ul {
+  list-style: none;
+  padding: 0;
+}
+
+.key-numbers li {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.key-numbers li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.key-numbers li span {
+  font-weight: 600;
+  color: var(--primary-navy);
+}
+
+/* Emergency number styling */
+.key-numbers li.emergency {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--emergency-red);
+}
+.key-numbers li.emergency span {
+  color: var(--emergency-red);
+}
