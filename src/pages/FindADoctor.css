@@ -150,7 +150,7 @@
   overflow: hidden;
   /* Fixed width to keep card size consistent across viewports */
   width: 320px; /* fixed card width */
-  min-width: 320px;
+  min-width: 260px;
   max-width: 320px;
 }
 
@@ -161,6 +161,23 @@
   height: 220px; /* slightly reduced to fit fixed card height */
   object-fit: cover;
   object-position: top; /* Ensures headshots are centered */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .search-bar { grid-template-columns: 1fr 0.7fr; }
+}
+
+@media (max-width: 700px) {
+  .search-bar { grid-template-columns: 1fr; align-items: stretch; }
+  .toggle-group { justify-content: flex-start; }
+  .doctor-grid { justify-content: center; }
+  .doctor-card { width: 100%; min-width: 0; max-width: 520px; }
+}
+
+@media (max-width: 420px) {
+  .doctor-card-image { height: 180px; }
+  .search-bar { padding: 1rem; gap: 1rem; }
 }
 
 .doctor-card-content {

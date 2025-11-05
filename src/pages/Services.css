@@ -88,3 +88,15 @@
   color: var(--primary-navy);
   text-decoration: underline;
 }
+
+/* Responsive: adjust service grid and card sizes */
+@media (max-width: 992px) {
+  .services-list-container { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+  .services-header h1 { font-size: 2rem; }
+}
+
+@media (max-width: 600px) {
+  .services-header { padding: 2rem 1rem; }
+  .service-card-image { height: 160px; }
+  .service-card { max-width: 100%; }
+}

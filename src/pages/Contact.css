@@ -45,6 +45,17 @@
   border-radius: 12px;
 }
 
+/* Responsive: stack contact columns on smaller devices */
+@media (max-width: 900px) {
+  .contact-layout { grid-template-columns: 1fr; }
+  .map-container { height: 320px; }
+}
+
+@media (max-width: 420px) {
+  .map-container { height: 260px; }
+  .contact-page { padding: 2rem 0; }
+}
+
 .contact-form {
   background-color: var(--neutral-white);
   padding: 2.5rem;

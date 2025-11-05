@@ -96,12 +96,12 @@ const Homepage = () => {
           <h2>News & Community</h2>
           <div className="news-grid">
             <article className="news-item">
-              <img src="https://images.unsplash.com/photo-1581091870631-b458f3685c4a?w=500" alt="Robotic Surgery" />
+              <img src="/robot.png" alt="Robotic Surgery" />
               <div className="news-content">
                 <span className="news-category">Hospital News</span>
                 <h3>Mirins Opens New Robotic Surgery Wing</h3>
                 <p>Our new state-of-the-art facility is now open, offering minimally invasive procedures.</p>
-                <Link to="/news/1">Read More</Link>
+                {/*<Link to="/events/1">Learn More</Link>*/}
               </div>
             </article>
             <article className="news-item">
@@ -110,16 +110,16 @@ const Homepage = () => {
                 <span className="news-category">Community</span>
                 <h3>Free Community Health Fair - Nov 15th</h3>
                 <p>Join us for free screenings, wellness tips, and family-friendly activities.</p>
-                <Link to="/events/1">Learn More</Link>
+                {/*<Link to="/events/1">Learn More</Link>*/}
               </div>
             </article>
             <article className="news-item">
               <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=500" alt="Doctor Research" />
               <div className="news-content">
                 <span className="news-category">Research</span>
-                <h3>Dr. Anya Sharma's Research Published</h3>
-                <p>Dr. Sharma's groundbreaking study on AI in diagnostics featured in top medical journal.</p>
-                <Link to="/news/2">Read More</Link>
+                <h3>Dr. Karthikeya's Research Published</h3>
+                <p>Dr. karthikeya's groundbreaking study on AI in diagnostics featured in top medical journal.</p>
+                {/*<Link to="/events/1">Learn More</Link>*/}
               </div>
             </article>
           </div>

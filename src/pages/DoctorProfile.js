@@ -8,8 +8,18 @@ const DoctorProfile = () => {
   const { id } = useParams();
   
   // 2. Find the correct doctor from our data
-  // We use parseInt because the 'id' from the URL is a string
-  const doctor = allDoctors.find(doc => doc.id === parseInt(id));
+  // Support both numeric ids (e.g. /doctor/1) and name-based slugs (e.g. /doctor/Dr.IrshathNasreen)
+  const numericId = Number(id);
+  let doctor = null;
+  if (!Number.isNaN(numericId)) {
+    doctor = allDoctors.find(doc => doc.id === numericId);
+  }
+
+  if (!doctor) {
+    // Normalize the incoming id and doctor names to compare slugs
+    const incomingSlug = String(id).toLowerCase().replace(/[^a-z0-9]/g, '');
+    doctor = allDoctors.find(doc => String(doc.name).toLowerCase().replace(/[^a-z0-9]/g, '') === incomingSlug);
+  }
 
   // 3. Handle case where no doctor is found
   if (!doctor) {

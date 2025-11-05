@@ -59,6 +59,18 @@
   line-height: 1.8;
 }
 
+/* Responsive accordion adjustments */
+@media (max-width: 700px) {
+  .accordion-title { font-size: 1.2rem; padding: 1rem 0.75rem; }
+  .accordion-icon { margin-right: 1rem; }
+  .accordion-content-inner { padding: 1rem 1rem 1rem 3.5rem; }
+  .accordion-content-inner p { font-size: 0.95rem; }
+}
+
+@media (max-width: 420px) {
+  .accordion-content-inner { padding-left: 2.5rem; }
+}
+
 .accordion-content-inner p:last-child {
   margin-bottom: 0;
 }

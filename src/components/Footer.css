@@ -82,3 +82,8 @@
 .footer-bottom a:hover {
   color: var(--neutral-white);
 }
+
+@media (max-width: 600px) {
+  .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+  .footer-grid { grid-template-columns: 1fr; }
+}

@@ -65,6 +65,29 @@ img {
   margin: 0 auto;
 }
 
+/* --- RESPONSIVE TYPOGRAPHY & HELPERS --- */
+/* Scale headings down on smaller screens for better fit */
+@media (max-width: 992px) {
+  h1 { font-size: 2.6rem; }
+  h2 { font-size: 1.9rem; }
+}
+
+@media (max-width: 600px) {
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.3rem; }
+  body { font-size: 15px; }
+  .container { width: 94%; }
+}
+
+/* Utility row/column helpers (lightweight grid) */
+.row { display: flex; flex-wrap: wrap; gap: 1rem; }
+.col { flex: 1 1 0%; }
+.align-center { display:flex; align-items:center; justify-content:center; }
+
+/* Improve image/video iframes responsiveness */
+.responsive-embed { width: 100%; height: auto; }
+
+
 /* --- 3. REUSABLE CLASSES & BUTTONS --- */
 .btn {
   font-family: 'Poppins', sans-serif;
