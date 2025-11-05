@@ -2,13 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './About.css'; // Import the new styles
 
-// Placeholder images
-const historyImg = 'https://images.unsplash.com/photo-1580281657527-47f249e0f90a?w=600';
-const leader1 = 'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=400';
-const leader2 = 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400';
-const leader3 = 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400';
-const leader4 = 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400';
-
 const About = () => {
   return (
     <div className="about-page">
@@ -38,32 +31,32 @@ const About = () => {
             <Link to="/contact" className="btn btn-primary">Join Our Team</Link>
           </div>
           <div className="history-image">
-            <img src={historyImg} alt="Mirins Hospital original building" />
+            <img src="/mirinsbuilding.png" alt="Mirins Hospital original building" />
           </div>
         </section>
 
         {/* --- 3. Leadership Section --- */}
         <section className="leadership-section">
-          <h2>Meet Our Leadership</h2>
+          <h2>Meet Our Leaders</h2>
           <div className="leadership-grid">
             <div className="leader-card">
-              <img src={leader1} alt="Michael R." />
-              <h3>Michael R.</h3>
+              <img src="/profilemale.png" alt="Michael R." />
+              <h3>Noufal Malik</h3>
               <p>Chief Executive Officer (CEO)</p>
             </div>
             <div className="leader-card">
-              <img src={leader2} alt="Dr. Sarah Chen" />
-              <h3>Dr. Sarah Chen</h3>
+              <img src="/profilefemale.png" alt="Dr. Sarah Chen" />
+              <h3>Dr. Irshath Nasreen</h3>
               <p>Chief Medical Officer (CMO)</p>
             </div>
             <div className="leader-card">
-              <img src={leader3} alt="David Kim" />
-              <h3>David Kim</h3>
+              <img src="/profilemale.png" alt="David Kim" />
+              <h3>Harish Kumar</h3>
               <p>Chief Financial Officer (CFO)</p>
             </div>
             <div className="leader-card">
-              <img src={leader4} alt="Priya Singh" />
-              <h3>Priya Singh, RN</h3>
+              <img src="/profilefemale.png" alt="Priya Singh" />
+              <h3>Priya Gopal</h3>
               <p>Chief Nursing Officer (CNO)</p>
             </div>
           </div>

@@ -16,8 +16,20 @@ const Visitors = () => {
           <Accordion title="Locations & Parking">
             <p>Our main campus is conveniently located downtown. We also have several clinics to serve you closer to home.</p>
             <div className="map-placeholder">
-              [Interactive Map Placeholder]
+              <iframe
+                title="Mirins Main Hospital Location"
+                src="https://www.google.com/maps?q=10.4286451,79.3146717&z=17&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
+            <p style={{ marginTop: '0.5rem' }}>
+              No 125, AVK Street, Pattukottai-614601 — <a href="https://www.google.com/maps/place/New+Rajamani+theatre/@10.4286504,79.3120968,17z/data=!3m1!4b1!4m6!3m5!1s0x3b00009789ee10b3:0xd4872446268070f9!8m2!3d10.4286451!4d79.3146717!16s%2Fg%2F1tg_vj2m?entry=ttu&g_ep=EgoyMDI1MTEwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+            </p>
           </Accordion>
 
           {/* --- Accordion Item 2 --- */}

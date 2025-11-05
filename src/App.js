@@ -9,6 +9,7 @@ import Visitors from './pages/Visitors';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 // 1. ADD THIS IMPORT
 import DoctorProfile from './pages/DoctorProfile'; 
@@ -16,6 +17,7 @@ import DoctorProfile from './pages/DoctorProfile';
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Header />
       <main>
         <Routes>

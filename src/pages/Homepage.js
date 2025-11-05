@@ -48,7 +48,7 @@ const Homepage = () => {
           <div className="services-grid">
             {/* These cards use the 'lift-on-hover' class from index.css */}
             <div className="service-card lift-on-hover">
-              <img src="https://plus.unsplash.com/premium_photo-1673953509975-576c7b3d52f6?w=500" alt="Heart Care" />
+              <img src="/heart.png" alt="Heart Care" />
               <div className="service-card-content">
                 <h3>The Mirins Heart Institute</h3>
                 <p>Comprehensive cardiac care, from prevention to advanced surgical procedures.</p>
@@ -69,14 +69,6 @@ const Homepage = () => {
                 <h3>Orthopedics & Sports Medicine</h3>
                 <p>Getting you back to your peak performance with expert surgical and rehab teams.</p>
                 <Link to="/services/orthopedics">Learn More</Link>
-              </div>
-            </div>
-            <div className="service-card lift-on-hover">
-              <img src="https://images.unsplash.com/photo-1618939303342-3a7a4059a43a?w=500" alt="Women's Health" />
-              <div className="service-card-content">
-                <h3>Women's Health & Maternity</h3>
-                <p>A lifetime of specialized care, from maternity to wellness and beyond.</p>
-                <Link to="/services/womens-health">Learn More</Link>
               </div>
             </div>
           </div>

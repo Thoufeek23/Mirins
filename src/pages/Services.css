@@ -1,25 +1,90 @@
+/* src/pages/Services.css */
+
 .services-page {
-  padding: 40px 0;
+  padding-bottom: 4rem;
+  background-color: var(--neutral-gray);
+  min-height: 80vh;
+}
+
+/* --- Header --- */
+.services-header {
+  padding: 4rem 0;
+  background-color: var(--primary-navy);
+  color: var(--neutral-white);
+  text-align: center;
+  margin-bottom: 4rem;
 }
 
 .services-header h1 {
-  margin-bottom: 8px;
+  color: var(--neutral-white);
+  font-size: 2.8rem;
 }
 
-.services-list {
+.services-header p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  color: var(--neutral-white);
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* --- Grid Container --- */
+.services-list-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin-top: 24px;
+  /* Creates a responsive grid that fits as many 320px cards as it can */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  justify-items: center; /* Center cards if there's leftover space */
 }
 
-.service-item {
-  background: #fff;
-  border-radius: 6px;
-  padding: 18px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+/* --- Service Card --- */
+.service-card {
+  background-color: var(--neutral-white);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  max-width: 380px; /* Max card width */
 }
 
-.service-item h3 {
-  margin-top: 0;
+.service-card-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.service-card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Ensures footer link is always at the bottom */
+}
+
+.service-card-content h3 {
+  font-size: 1.4rem;
+  color: var(--primary-navy);
+  margin-bottom: 0.5rem;
+}
+
+.service-card-content p {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.btn-learn-more {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--accent-teal);
+  text-decoration: none;
+}
+
+.btn-learn-more:hover {
+  color: var(--primary-navy);
+  text-decoration: underline;
 }

@@ -32,16 +32,18 @@ const Footer = () => {
           </div>
           <div className="footer-col">
             <h4>Contact Us</h4>
-            <p>123 Health St, Wellness City, 45678</p>
-            <p><strong>Phone:</strong> (123) 456-7890</p>
-            <p><strong>Emergency:</strong> 911</p>
+            <p>No 125, AVK Street, Pattukottai-614601</p>
+            <p><strong>Phone:</strong> +91 1234567890</p>
+            <p><strong>Emergency:</strong> 108</p>
           </div>
         </div>
         <div className="footer-bottom">
           <p>&copy; {new Date().getFullYear()} Mirins Multispeciality Hospital. All rights reserved.</p>
+          {/*
           <p>
             <Link to="/privacy">Privacy Policy</Link> | <Link to="/terms">Terms of Use</Link>
           </p>
+          */}
         </div>
       </div>
     </footer>
