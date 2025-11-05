@@ -116,12 +116,11 @@
 /* Mobile: hide the nav links and show a toggle */
 .nav-container { position: relative; }
 .nav-toggle {
-  display: none;
+  display: none; /* This is now the default (hidden on large screens) */
   background: transparent;
   border: none;
   cursor: pointer;
   padding: 8px;
-  display: inline-flex;
   align-items: center;
   justify-content: center;
 }
@@ -134,7 +133,7 @@
 
 @media (max-width: 992px) {
   /* Show a compact mobile menu at tablet widths and below */
-  .nav-toggle { display: block; }
+  .nav-toggle { display: inline-flex; }
   .nav-links {
     display: none;
     position: absolute;
